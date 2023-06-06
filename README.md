@@ -103,7 +103,7 @@ Element at index 0: 30
 Element at index 1: 20
 Element at index 2: 55
 array length: 3
-valentino7504@Valentino-PC:~/c/dynamic_array$ valgrind ./main
+user@hostname:~/c/dynamic_array$ valgrind ./main
 ==5757== Memcheck, a memory error detector
 ==5757== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==5757== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
