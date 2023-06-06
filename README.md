@@ -73,6 +73,16 @@ int main() {
     array->update_element(array->self, 1, &newElement);
     print_int_element(array->self, 1);
 
+    // Remove an element from the array
+    array->delete_element(array->self, 0);
+    print_int_element(array->self, 0);
+
+    array->push(array->self, &element2);
+    array->push(array->self, &element3);
+    print_int_element(array->self, 1);
+    print_int_element(array->self, 2);
+    printf("array length: %zu\n", array->length);
+
     // Free the dynamic array
     array->delete_array(array->self);
     return 0;

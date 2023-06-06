@@ -38,6 +38,5 @@ void remove_element(DynamicArray *array, size_t index)
 	}
 	for (i = index; i < (array->length - 1); i++)
 		array->data[i] = array->data[i + 1];
-	free(array->data[array->length - 1]);
 	array->length -= 1;
 }
