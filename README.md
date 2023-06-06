@@ -89,6 +89,44 @@ int main() {
 }
 ```
 
+### Output
+
+Here is the output of the above code. I used Valgrind to check for memory leaks.
+
+```console
+user@hostname:~/c/dynamic_array$ gcc dynarray_helpers*.c main.c -o main
+user@hostname:~/c/dynamic_array$ ./main
+Element at index 0: 10
+Element at index 1: 20
+Element at index 1: 30
+Element at index 0: 30
+Element at index 1: 20
+Element at index 2: 55
+array length: 3
+valentino7504@Valentino-PC:~/c/dynamic_array$ valgrind ./main
+==5757== Memcheck, a memory error detector
+==5757== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5757== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==5757== Command: ./main
+==5757== 
+Element at index 0: 10
+Element at index 1: 20
+Element at index 1: 30
+Element at index 0: 30
+Element at index 1: 20
+Element at index 2: 55
+array length: 3
+==5757== 
+==5757== HEAP SUMMARY:
+==5757==     in use at exit: 0 bytes in 0 blocks
+==5757==   total heap usage: 5 allocs, 5 frees, 1,160 bytes allocated
+==5757== 
+==5757== All heap blocks were freed -- no leaks are possible
+==5757== 
+==5757== For lists of detected and suppressed errors, rerun with: -s
+==5757== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
+
 ## Tests
 
 At the moment, test cases for the dynamic array functions have not been implemented. Due to time constraints, I have not been able to thoroughly test the functionality of the dynamic array. I plan to add test cases at some point in the future though so watch this space I guess😂
