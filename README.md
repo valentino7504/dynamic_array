@@ -73,6 +73,8 @@ int main() {
     array->update_element(array->self, 1, &newElement);
     print_int_element(array->self, 1);
 
+    // Free the dynamic array
+    array->delete_array(array->self);
     return 0;
 }
 ```

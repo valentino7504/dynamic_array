@@ -36,7 +36,12 @@ void free_dynarray(DynamicArray *array)
 {
 	int i = 0;
 
-	for (i = 0; i < array->length; i++)
+	if (array == NULL)
+	{
+		printf("Invalid array pointer");
+		return;
+	}
+	for (i = 0; i < (sizeof(array->data) / sizeof(void *) - 1); i++)
 		free(array->data[i]);
 	free(array->data);
 	free(array);

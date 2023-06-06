@@ -29,8 +29,8 @@ struct DynamicArray
 	void *(*get)(DynamicArray *array, size_t index);
 	void (*update_element)(DynamicArray *array, size_t index, void *new_value);
 	void (*resize)(DynamicArray *array);
-	void (*delete_element)(DynamicArray *, size_t index);
-	void (*delete_array)(DynamicArray *);
+	void (*delete_element)(DynamicArray *array, size_t index);
+	void (*delete_array)(DynamicArray *array);
 };
 DynamicArray *create_array();
 void free_dynarray(DynamicArray *array);
