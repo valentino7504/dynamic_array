@@ -65,22 +65,13 @@ int main() {
     array->push(array->self, &element2);
 
     // Get and print elements from the array
-    int *first_element = array->get(array->self, 0);
-    int *second_element = array->get(array->self, 1);
-    print_int_element(first_element, 0);
-    print_int_element(second_element, 1);
+    print_int_element(array->self, 0);
+    print_int_element(array->self, 1);
 
     // Update an element in the array
     int newElement = 30;
     array->update_element(array->self, 1, &newElement);
     print_int_element(array->self, 1);
-
-    // Remove an element from the array
-    array->delete_element(array->self, 0);
-    print_int_element(array->self, 0);
-
-    // Free the dynamic array
-    array->delete_array(array->self);
 
     return 0;
 }
