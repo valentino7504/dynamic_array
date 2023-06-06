@@ -9,7 +9,7 @@ This project is a simple implementation of a dynamic array in C. It provides fun
 - [Functions](#functions)
 - [Examples](#example-usage)
 - [Tests](#tests)
-- [Conclusion]
+- [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -92,4 +92,4 @@ At the moment, test cases for the dynamic array functions have not been implemen
 
 ## Conclusion
 
-In conclusion, this dynamic array implementation provides a solution for managing resizable arrays in C. By utilizing function pointers and a self-reference within the struct, it offers a convenient interface for manipulating the array and accessing its elements. While comprehensive test cases have not been provided at this time, it is recommended to develop and run tests to ensure the proper functioning of the dynamic array in different scenarios.
+In conclusion, this dynamic array implementation provides a solution for managing resizable arrays in C. I utilized function pointers and a self-reference within the struct, to offer a convenient interface for manipulating the array and accessing its elements. While comprehensive test cases have not been provided at this time, I do suggest you develop and run tests to ensure the proper functioning of the dynamic array in different scenarios.
